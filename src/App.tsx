@@ -15,7 +15,9 @@ function App() {
         setReminders(reminders);
     }
     const removeReminder = (id: number) => {
-        console.log(id);
+        setReminders(reminders.filter((reminder) => {
+            return reminder.id !== id;
+        }));
     }
 
 

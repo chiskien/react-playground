@@ -6,7 +6,6 @@ class ReminderService {
         baseURL: "http://localhost:3000"
     });
 
-
     async getReminders() {
         const response = await this.http.get<Reminder[]>("/todos")
         return response.data;
